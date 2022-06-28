@@ -582,3 +582,22 @@ html.transition *:after {
     }
   }
 }
+
+// custom
+h4 {
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  code {
+    float: right;
+  }
+}
+
+ul{
+  padding-inline-start: 1.2em;
+}
+
+.navbar-brand span {
+  color: var(--global-theme-color);
+}
