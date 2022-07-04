@@ -1,0 +1,5 @@
+I"Ó<h2 id="ssh-connection">SSH Connection</h2>
+<p>Refer <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html</a></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh <span class="nt">-i</span> <span class="s2">"~/Downloads/aws_webserver.pem"</span> ubuntu@ec2-3-83-163-243.compute-1.amazonaws.com</code></pre></figure>
+:ET

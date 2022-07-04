@@ -1,0 +1,196 @@
+I"�,<p>A passionate learner and technology enthusiast looking to further my learning and use new technology to personalise healthcare. Qualified as a Biomedical engineer and having experience in software development, machine learning, signal processing and hardware prototyping.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="education">Education</h2>
+
+<h4 id="university-of-moratuwa-october-2016--december-2021">University of Moratuwa <code class="language-plaintext highlighter-rouge">October 2016 – December 2021</code></h4>
+<ul>
+  <li>BSc. of Engineering Honours - Biomedical Engineering (First Class)</li>
+  <li>Department of Electronics and Telecommunication</li>
+</ul>
+
+<h4 id="chartered-institute-of-management-accountants-cima--november-2015--august-2017">Chartered Institute of Management Accountants (CIMA) 	<code class="language-plaintext highlighter-rouge">November 2015 – August 2017</code></h4>
+<ul>
+  <li>CIMA Passed Finalist</li>
+</ul>
+
+<h4 id="vidura-college--colombo--2001-2015">Vidura College – Colombo 	<code class="language-plaintext highlighter-rouge">2001-2015</code></h4>
+<ul>
+  <li>G.C.E Advanced Level (2015)  Physical Science Stream. Country Rank – 17  (Z-Score - 2.8676)</li>
+  <li>G.C.E Ordinary Level (2012)  - 8A and 1B</li>
+</ul>
+
+<h2 id="research-experience">Research Experience</h2>
+
+<h4 id="undergraduate-research-project---university-of-moratuwa-sri-lanka--feb-2020---july-2021">Undergraduate Research Project - University of Moratuwa (Sri Lanka)	 <code class="language-plaintext highlighter-rouge">Feb 2020 - July 2021</code></h4>
+<p><strong>Thesis Title</strong>: Reconfigurable multimodal bio signal acquisition system for measuring endothelial function	
+<strong>Supervisor</strong>: Dr. Anjula De Silva</p>
+
+<p>The study focused on the use of bioimpedance to diagnose endothelial dysfunction. We created a novel device to record 4 biosignals, blood pressure, temperature, bioimpedance and PPG signals from a patient’s arm in order to compare the significance of bioimpedance compared to existing methods. A clinical study was carried out using the device and we were able to identify a significant difference between Type II Diabetes patients and healthy patients. 
+Technologies used: ESP32, C++, Altium, Python, MATLAB</p>
+
+<h4 id="industrial-research-intern-csiro---data61-brisbane-australia-july-2019--december-2019">Industrial Research Intern CSIRO - Data61 (Brisbane, Australia)	<code class="language-plaintext highlighter-rouge">July 2019 – December 2019</code></h4>
+<p><strong>Research Project</strong>  - 3D SLAM (Spatial Localization And Mapping)  for robotics and situational awareness.
+<strong>Supervisors</strong>: Michael Thoreau, Nick Panitz</p>
+
+<p>This research focused on increasing worker safety on factory floors by providing situational awareness to robots and autonomous vehicles using security camera footage. A real-time 3D reconstruction of the factory was created from the video feed. I created an application for viewing and exploring the virtual environment. This was used by other researchers to evaluate the effectiveness of various computer vision algorithms and to demonstrate the research to clients for commercialization. I also worked on segmenting and classifying  objects in 3D space using machine learning models. 
+Technologies used: Python, JavaScript</p>
+
+<h2 id="work-experience">Work Experience</h2>
+<h4 id="yaala-labs-pvt-ltd--january-2021---present">Yaala Labs (Pvt) Ltd  <code class="language-plaintext highlighter-rouge">January 2021 - present</code></h4>
+<!-- 16 De Fonseka Road, Colombo 05 -->
+<h6 id="--software-architect--december-2021--present">- Software Architect 	<code class="language-plaintext highlighter-rouge">December 2021 – present</code></h6>
+
+<p>Responsible for the smart search feature of a DeFi (Decentralised Finance) exchange where orders are automatically matched while preserving data security and privacy.
+Responsible for maintaining the post-trade system of the DeFi exchange.
+Responsible for developing
+Designed and developed a frontend application for the company’s main client in 2 weeks. 
+Developing cloud native full-stack applications on AWS</p>
+
+<h6 id="--software-engineer--january-2021--november-2021">- Software Engineer 	<code class="language-plaintext highlighter-rouge">January 2021 – November 2021</code></h6>
+
+<p>Responsible for developing and maintaining the Tradeweb gateway that uses FIX protocol to report market activity in stock exchange systems
+Wrote automated tests for verifying operation of a distributed ledger systems
+Developed cloud-native application on AWS</p>
+
+<h4 id="co-founder---cascadia-solutions-pvt-ltd--august-2016--march-2022">Co-founder - Cascadia Solutions (Pvt) Ltd  <code class="language-plaintext highlighter-rouge">August 2016 – March 2022</code></h4>
+<!-- 10/2, 2nd Lane, Medawelikada Road, Rajagiriya, Sri Lanka -->
+
+<p>Developed Eventesia.lk platform for finding service providers for organising events
+Designed and developed websites for various corporate clients. (e.g.- www.bodaboda.lk)
+Developed the corporate branding guidelines and created marketing material for numerous clients.</p>
+<h4 id="bionicb-academy-colombo-sri-lanka-november-2021--january-2022">BionicB Academy (Colombo, Sri Lanka)	<code class="language-plaintext highlighter-rouge">November 2021 – January 2022</code></h4>
+
+<p>Lecturer for Basic Electronics &amp; Microcontroller programming
+Taught the basics of microcontroller programming using Arduino for students of various age groups at a private education institute.</p>
+
+<h4 id="reverse-mentor-to-the-chairman---unilever-sri-lanka--july-2018--december-2019">Reverse mentor to the Chairman - Unilever (Sri Lanka)  <code class="language-plaintext highlighter-rouge">July 2018 – December 2019</code></h4>
+<!-- No. 258 Grandpass Road, Colombo 14 	 -->
+
+<p>Part of an exceptional team of 4 helping the Chairman of Unilever navigate the fast changing technological landscape
+Advised on technologies to streamline business processes, capture market data and understand the consumers.</p>
+
+<h4 id="achievers-lanka-business-school-colombo-sri-lanka-june-2016--december-2017">Achievers Lanka Business School (Colombo, Sri Lanka)	<code class="language-plaintext highlighter-rouge">June 2016 – December 2017</code></h4>
+
+<p>Part-time Lecturer CIMA Financial Pillar
+Lecturer for International Accounting Standards and International Financial Reporting Standards for CIMA Operational level students. Published a set of quick reference flash cards for CIMA BA3 - Fundamentals of Financial Accounting and F1 Financial Reporting and Taxation.</p>
+<h4 id="intern---forestpin-pvt-ltd---july-2016--october-2016">Intern - Forestpin (Pvt) Ltd  	<code class="language-plaintext highlighter-rouge">July 2016 – October 2016</code></h4>
+<p><!-- No. 3, Gomes Path, Colombo 5, Sri Lanka.  --></p>
+
+<p>Designed the sales pitch and created tutorial videos for the main product Forestpin Analytics.
+Learned the fundamentals of data analytics and excel programming for data analysis and fraud detection</p>
+
+<h2 id="notable-awards">Notable Awards</h2>
+<ul>
+  <li>1st Runner-Up – Technology Infusion Grand Challenge  – Latrobe University (2020/21)</li>
+  <li>Silver Medal – National Intermediate Rowing Championship (2019)</li>
+  <li>Champions – Inter-university Rowing Championship (2018)</li>
+  <li>1st Runner-Up - Unilever Future Leaders League (2017) Global Challenge U.K</li>
+  <li>Winner - Unilever Challenge 2016 (Sri Lanka)</li>
+  <li>Bronze Medal - Physics Olympiad (2015)</li>
+  <li>Higher Distinction - Mathematics Olympiad (2015)</li>
+  <li>Higher Distinction - Mathematics Olympiad (2014)</li>
+</ul>
+
+<h2 id="skills">Skills</h2>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Programming <code class="language-plaintext highlighter-rouge">TypeScript</code></td>
+          <td><code class="language-plaintext highlighter-rouge">JavaScript</code></td>
+          <td><code class="language-plaintext highlighter-rouge">Python</code></td>
+          <td><code class="language-plaintext highlighter-rouge">Java</code></td>
+          <td><code class="language-plaintext highlighter-rouge">MATLAB</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Machine Learning and AI <code class="language-plaintext highlighter-rouge">TensorFlow</code></td>
+          <td><code class="language-plaintext highlighter-rouge">SciKit Learn</code></td>
+          <td><code class="language-plaintext highlighter-rouge">IBM Watson</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Engineering Design PCB Design - <code class="language-plaintext highlighter-rouge">Altium</code></td>
+          <td><code class="language-plaintext highlighter-rouge">OrCAD</code></td>
+          <td><code class="language-plaintext highlighter-rouge">SolidWorks</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Web Development <code class="language-plaintext highlighter-rouge">Angular</code>, <code class="language-plaintext highlighter-rouge">React</code></td>
+          <td><code class="language-plaintext highlighter-rouge">HTML</code></td>
+          <td><code class="language-plaintext highlighter-rouge">CSS</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Databases - <code class="language-plaintext highlighter-rouge">MongoDB</code></td>
+          <td><code class="language-plaintext highlighter-rouge">MySQL</code></td>
+          <td><code class="language-plaintext highlighter-rouge">Firebase</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Public cloud <code class="language-plaintext highlighter-rouge">AWS</code></td>
+          <td><code class="language-plaintext highlighter-rouge">Google Cloud Platform</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Graphic Design - <code class="language-plaintext highlighter-rouge">Adobe Illustrator</code></li>
+  <li>Photo Editing - <code class="language-plaintext highlighter-rouge">Adobe Photoshop</code></li>
+  <li>Video Editing - <code class="language-plaintext highlighter-rouge">Davinci Resolve</code></li>
+</ul>
+
+<h2 id="other-activities">Other Activities</h2>
+
+<ul>
+  <li>Academic Mentor - Brainstorm Biomedical Innovation Competition (2021)</li>
+  <li>Advisor – IEEE EMBS Student Chapter University of Moratuwa (2020)</li>
+  <li>Treasurer – IEEE EMBS Student Chapter University of Moratuwa (2019)</li>
+  <li>Unilever SPARKS Student Ambassador 2018/19</li>
+  <li>Oarsman – University of Moratuwa Rowing Club</li>
+  <li>Treasurer (2018/2019) – IEEE EMBS Student Chapter University of Moratuwa</li>
+  <li>Director of Education (2017/2018) – IEEE EMBS Student Chapter University of Moratuwa</li>
+  <li>President – Past Pupils Association of Vidura College (2016- 2017)</li>
+  <li>Basketball (Achievers Lanka Business School 2015-2016)</li>
+  <li>Prefect – Vidura College (2011)</li>
+  <li>Captain of the Chess Team – Vidura College (2010)</li>
+</ul>
+
+<h2 id="volunteer-experience">Volunteer Experience</h2>
+
+<ul>
+  <li>Aid station volunteer at IronMan 70.3 Colombo 2018</li>
+  <li>Volunteer at CCR disabled running</li>
+</ul>
+
+:ET

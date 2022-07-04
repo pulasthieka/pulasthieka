@@ -1,0 +1,114 @@
+I"R<h2 id="ssh-connection">SSH Connection</h2>
+<p>Refer <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html</a></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh <span class="nt">-i</span> <span class="s2">"~/Downloads/aws_webserver.pem"</span> ubuntu@ec2-3-83-163-243.compute-1.amazonaws.com</code></pre></figure>
+
+<h2 id="install-mongodb">Install MongoDB</h2>
+<p>Refer <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/</a></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">wget <span class="nt">-qO</span> - https://www.mongodb.org/static/pgp/server-5.0.asc | <span class="nb">sudo </span>apt-key add -
+<span class="nb">echo</span> <span class="s2">"deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse"</span> | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/mongodb-org-5.0.list
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> mongodb-org
+<span class="nb">sudo </span>systemctl start mongod
+<span class="nb">sudo </span>systemctl status mongod</code></pre></figure>
+
+<h5 id="setup-authentication-for-mongodb-optional">Setup authentication for mongodb (optional)</h5>
+<p>Refer.</p>
+<ul>
+  <li><a href="https://docs.mongodb.com/manual/tutorial/configure-scram-client-authentication/">https://docs.mongodb.com/manual/tutorial/configure-scram-client-authentication/</a></li>
+  <li><a href="https://docs.mongodb.com/manual/reference/connection-string/">https://docs.mongodb.com/manual/reference/connection-string/</a></li>
+</ul>
+
+<p>Open a mongo shell with - <code class="language-plaintext highlighter-rouge">mongosh</code></p>
+
+<p>Run the following in the mongo shell</p>
+
+<figure class="highlight"><pre><code class="language-mongo" data-lang="mongo">  use admin
+  db.createUser(
+    {
+      user: "myUserAdmin",
+      pwd: "myPassword", // or cleartext password
+      roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+    }
+  )
+  db.adminCommand( { shutdown: 1 } )
+  </code></pre></figure>
+
+<p>Exit mongosh with <code class="language-plaintext highlighter-rouge">Crtl+ C</code> and run the following in a normal shell</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>nano /etc/mongod.conf
+<span class="c"># add the following lines ###########</span>
+security
+  authentication: enabled
+<span class="c">#####################################</span>
+<span class="nb">sudo </span>systemctl restart mongod
+
+<span class="c"># how to connect after enabling auth</span>
+mongosh <span class="nt">--port</span> 27017 <span class="nt">--authenticationDatabase</span> <span class="s2">"admin"</span> <span class="nt">-u</span> <span class="s2">"myUserAdmin"</span> <span class="nt">-p</span> <span class="s2">"myPassword"</span>
+<span class="c"># change mongodb URL in the server config too</span></code></pre></figure>
+
+<p>In case of errors try the following</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo chown</span> <span class="nt">-R</span> mongodb:mongodb /var/lib/mongodb
+<span class="nb">sudo chown </span>mongodb:mongodb /tmp/mongodb-27017.sock
+<span class="nb">sudo </span>service mongod restart
+<span class="nb">sudo </span>systemctl status mongod</code></pre></figure>
+
+<h2 id="install-nodejs">Install NodeJS</h2>
+<p><code class="language-plaintext highlighter-rouge">sudo snap install node --classic</code></p>
+
+<h3 id="transferring-files">Transferring files</h3>
+<p><code class="language-plaintext highlighter-rouge">sudo snap install wormhole</code></p>
+
+<blockquote>
+  <p><strong>Important</strong> wormhole is named magic-wormhole in mac. You have to install in your local machine to upload the files</p>
+</blockquote>
+
+<p><code class="language-plaintext highlighter-rouge">wormhole receive &lt;received code&gt;</code></p>
+<h2 id="install-packages">Install packages</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>react-express-project
+npm i
+<span class="nb">cd </span>client
+npm i
+npm run build</code></pre></figure>
+
+<p>Set up Nginx.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt <span class="nb">install </span>nginx
+<span class="nb">sudo </span>service nginx start
+<span class="nb">sudo </span>service nginx status
+
+<span class="nb">sudo </span>nano /etc/nginx/sites-available/default
+<span class="nb">sudo </span>systemctl restart nginx</code></pre></figure>
+
+<h3 id="nginx-server-configuration">Nginx server configuration</h3>
+<p>Refer <a href="https://www.nginx.com/resources/wiki/start/topics/examples/full/">https://www.nginx.com/resources/wiki/start/topics/examples/full/</a> and edit the 
+ <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-available/default</code> file with the following.</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">server {
+    index index.html index.htm index.nginx-debian.html;
+    server_name example.com www.example.com;
+
+    location /
+    {
+      proxy_pass http://localhost:5000;
+      proxy_buffering         on;
+    }
+}</code></pre></figure>
+
+<h2 id="run-server">Run Server</h2>
+<p>Refer <a href="https://www.dev2qa.com/how-to-run-node-js-server-in-background/">https://www.dev2qa.com/how-to-run-node-js-server-in-background/</a></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">nohup </span>node server.js  <span class="o">&gt;</span> output.log &amp; <span class="nb">disown</span></code></pre></figure>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+  <li>Run nodejs in the background using <a href="https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/">PM2</a></li>
+  <li><a href="https://medium.com/idomongodb/how-to-npm-run-start-at-the-background-%EF%B8%8F-64ddda7c1f1">https://medium.com/idomongodb/how-to-npm-run-start-at-the-background-%EF%B8%8F-64ddda7c1f1</a></li>
+  <li><a href="https://medium.com/geekculture/deploying-a-react-app-and-a-node-js-server-on-a-single-machine-with-pm2-and-nginx-15f17251ee74">https://medium.com/geekculture/deploying-a-react-app-and-a-node-js-server-on-a-single-machine-with-pm2-and-nginx-15f17251ee74</a></li>
+  <li><a href="https://keithweaverca.medium.com/setting-up-mern-stack-on-aws-ec2-6dc599be4737">https://keithweaverca.medium.com/setting-up-mern-stack-on-aws-ec2-6dc599be4737</a></li>
+  <li><a href="https://unix.stackexchange.com/questions/420594/why-process-killed-with-nohup">https://unix.stackexchange.com/questions/420594/why-process-killed-with-nohup</a></li>
+</ul>
+:ET

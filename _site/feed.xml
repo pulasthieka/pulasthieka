@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-07-04T07:16:01+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Some useful Linux commands</title><link href="http://localhost:4000/blog/2022/commands/" rel="alternate" type="text/html" title="Some useful Linux commands" /><published>2022-01-21T20:39:00+05:30</published><updated>2022-01-21T20:39:00+05:30</updated><id>http://localhost:4000/blog/2022/commands</id><content type="html" xml:base="http://localhost:4000/blog/2022/commands/"><![CDATA[<p>#</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<ul>
+  <li>Check IP address <code class="language-plaintext highlighter-rouge">ifconfig -a</code></li>
+  <li>Run commands quickly with  <strong>Alt + F2</strong></li>
+  <li>Mount disk <code class="language-plaintext highlighter-rouge">udisksctl mount --block-device /dev/disk/by-uuid/&lt;uuid&gt;</code></li>
+  <li>View startup applications - <code class="language-plaintext highlighter-rouge">gnome-session-properties</code></li>
+  <li>Closing a port <code class="language-plaintext highlighter-rouge">sudo ss --kill state listening src :1234</code></li>
+  <li>Making files executable <code class="language-plaintext highlighter-rouge">sudo chmod +x filename</code>
+    <h2 id="fixing-temporary-failure-in-name-resolution">Fixing Temporary Failure in Name Resolution</h2>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chmod o+r /etc/resolv.conf
+sudo nano /etc/resolv.conf
+</code></pre></div>    </div>
+    <p>Replace the nameserver with Google DNS <code class="language-plaintext highlighter-rouge">8.8.8.8</code>
+Save file <code class="language-plaintext highlighter-rouge">Crtl + X</code></p>
+    <h2 id="freeing-ports-in-use">Freeing ports in Use</h2>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof -i:8080
+kill &lt;PROCESSID&gt;
+# or
+kill $(lsof -t -i:8080)
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="fixing-garbeled-audio">Fixing garbeled Audio</h2>
+<p>Uninstall</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt remove speech-dispatcher
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pulseaudio <span class="nt">--check</span> 
+<span class="c"># should exit with no message if running</span>
+pulseaudio <span class="nt">--k</span>
+pulseaudio <span class="nt">--start</span>
+pulseaudio <span class="nt">--check</span>
+</code></pre></div></div>
+<h2 id="installing-appimage-files">Installing .AppImage Files</h2>
+<p>Eg: if the AppImage file name was Obsidian-0.12.3</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod a+x Obsidian-0.12.3.AppImage
+./Obsidian-0.12.3.AppImage
+</code></pre></div></div>
+
+<h2 id="installing-deb-files">Installing .deb Files</h2>
+<p><code class="language-plaintext highlighter-rouge">sudo apt install ./zoom\_amd64.deb</code>
+OR <code class="language-plaintext highlighter-rouge">sudo dpkg -i package\_file.deb</code></p>
+<h2 id="uninstalling">Uninstalling</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get remove packageName
+dpkg <span class="nt">--remove</span> packageName
+</code></pre></div></div>
+<h2 id="installing-via-cmake">Installing via CMake</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./configure
+make
+make install
+</code></pre></div></div>
+
+<h2 id="unzip-files">Unzip files</h2>
+<h3 id="tar">Tar</h3>
+<p><code class="language-plaintext highlighter-rouge">tar xvzf PACKAGE.tar.gz</code>
+<code class="language-plaintext highlighter-rouge">tar -xf package.tar.gz </code></p>
+<h3 id="rar">RAR</h3>
+<p><code class="language-plaintext highlighter-rouge">unrar e &lt;filename&gt;</code></p>
+<h2 id="mounting-drives">Mounting drives</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># unmounting</span>
+umount /dev/sdb1
+<span class="c"># mounting</span>
+<span class="nb">sudo </span>mount /dev/sdb1 <span class="nt">-t</span> ntfs-3g <span class="nt">-o</span> permissions /media/pulasthi/Files/
+<span class="c"># setting permissions for all</span>
+<span class="nb">sudo chmod </span>ugo+wx /media/pulasthi/Files/
+</code></pre></div></div>
+
+<p>ledev14 us-east-2</p>
+<h2 id="tracing-packet-path">Tracing Packet path</h2>
+<p>Use traceroute. <code class="language-plaintext highlighter-rouge">sudo apt install traceroute</code> 
+Using dig <code class="language-plaintext highlighter-rouge">sudo apt-get install dnsutils</code>
+https://phoenixnap.com/kb/linux-dig-command-examples</p>
+
+<h2 id="switching-java-versions">Switching JAVA versions</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>update-alternatives <span class="nt">--config</span> java
+<span class="c"># exporting java home</span>
+<span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">"/usr/lib/jvm/java-1.8.0-openjdk-amd64"</span>
+</code></pre></div></div>
+
+<h2 id="fingerprint">Fingerprint</h2>
+<p>https://askubuntu.com/questions/1239134/fingerprint-sensor-not-working-ubuntu-20-04</p>
+
+<h2 id="cycle-swap-memory">Cycle swap memory</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo swapoff -a; sudo swapon -a
+</code></pre></div></div>
+
+<h2 id="start-chrome-without-cors">Start Chrome without CORS</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">google</span><span class="o">-</span><span class="nx">chrome</span> <span class="o">--</span><span class="nx">disable</span><span class="o">-</span><span class="nx">site</span><span class="o">-</span><span class="nx">isolation</span><span class="o">-</span><span class="nx">trials</span> <span class="o">--</span><span class="nx">disable</span><span class="o">-</span><span class="nx">web</span><span class="o">-</span><span class="nx">security</span> <span class="o">--</span><span class="nx">user</span><span class="o">-</span><span class="nx">data</span><span class="o">-</span><span class="nx">dir</span><span class="o">=</span><span class="dl">"</span><span class="s2">~/tmp</span><span class="dl">"</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="programming" /><category term="linux" /><category term="programming" /><summary type="html"><![CDATA[A quick reference of some not so commonly used, but useful linux commands]]></summary></entry><entry><title type="html">Setting up a web server in an EC2</title><link href="http://localhost:4000/blog/2022/setup-webserver/" rel="alternate" type="text/html" title="Setting up a web server in an EC2" /><published>2022-01-15T20:39:00+05:30</published><updated>2022-01-15T20:39:00+05:30</updated><id>http://localhost:4000/blog/2022/setup-webserver</id><content type="html" xml:base="http://localhost:4000/blog/2022/setup-webserver/"><![CDATA[<h2 id="ssh-connection">SSH Connection</h2>
+<p>Refer <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html</a></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh <span class="nt">-i</span> <span class="s2">"~/Downloads/aws_webserver.pem"</span> ubuntu@ec2-3-83-163-243.compute-1.amazonaws.com</code></pre></figure>
+
+<h2 id="install-mongodb">Install MongoDB</h2>
+<p>Refer <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/</a></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">wget <span class="nt">-qO</span> - https://www.mongodb.org/static/pgp/server-5.0.asc | <span class="nb">sudo </span>apt-key add -
+<span class="nb">echo</span> <span class="s2">"deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse"</span> | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/mongodb-org-5.0.list
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> mongodb-org
+<span class="nb">sudo </span>systemctl start mongod
+<span class="nb">sudo </span>systemctl status mongod</code></pre></figure>
+
+<h5 id="setup-authentication-for-mongodb-optional">Setup authentication for mongodb (optional)</h5>
+<p>Refer.</p>
+<ul>
+  <li><a href="https://docs.mongodb.com/manual/tutorial/configure-scram-client-authentication/">https://docs.mongodb.com/manual/tutorial/configure-scram-client-authentication/</a></li>
+  <li><a href="https://docs.mongodb.com/manual/reference/connection-string/">https://docs.mongodb.com/manual/reference/connection-string/</a></li>
+</ul>
+
+<p>Open a mongo shell with - <code class="language-plaintext highlighter-rouge">mongosh</code></p>
+
+<p>Run the following in the mongo shell</p>
+
+<figure class="highlight"><pre><code class="language-mongo" data-lang="mongo">  use admin
+  db.createUser(
+    {
+      user: "myUserAdmin",
+      pwd: "myPassword", // or cleartext password
+      roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+    }
+  )
+  db.adminCommand( { shutdown: 1 } )
+  </code></pre></figure>
+
+<p>Exit mongosh with <code class="language-plaintext highlighter-rouge">Crtl+ C</code> and run the following in a normal shell</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>nano /etc/mongod.conf
+<span class="c"># add the following lines ###########</span>
+security
+  authentication: enabled
+<span class="c">#####################################</span>
+<span class="nb">sudo </span>systemctl restart mongod
+
+<span class="c"># how to connect after enabling auth</span>
+mongosh <span class="nt">--port</span> 27017 <span class="nt">--authenticationDatabase</span> <span class="s2">"admin"</span> <span class="nt">-u</span> <span class="s2">"myUserAdmin"</span> <span class="nt">-p</span> <span class="s2">"myPassword"</span>
+<span class="c"># change mongodb URL in the server config too</span></code></pre></figure>
+
+<p>In case of errors try the following</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo chown</span> <span class="nt">-R</span> mongodb:mongodb /var/lib/mongodb
+<span class="nb">sudo chown </span>mongodb:mongodb /tmp/mongodb-27017.sock
+<span class="nb">sudo </span>service mongod restart
+<span class="nb">sudo </span>systemctl status mongod</code></pre></figure>
+
+<h2 id="install-nodejs">Install NodeJS</h2>
+<p><code class="language-plaintext highlighter-rouge">sudo snap install node --classic</code></p>
+
+<h3 id="transferring-files">Transferring files</h3>
+<p><code class="language-plaintext highlighter-rouge">sudo snap install wormhole</code></p>
+
+<blockquote>
+  <p><strong>Important</strong> wormhole is named magic-wormhole in mac. You have to install in your local machine to upload the files</p>
+</blockquote>
+
+<p><code class="language-plaintext highlighter-rouge">wormhole receive &lt;received code&gt;</code></p>
+<h2 id="install-packages">Install packages</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>react-express-project
+npm i
+<span class="nb">cd </span>client
+npm i
+npm run build</code></pre></figure>
+
+<p>Set up Nginx.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt <span class="nb">install </span>nginx
+<span class="nb">sudo </span>service nginx start
+<span class="nb">sudo </span>service nginx status
+
+<span class="nb">sudo </span>nano /etc/nginx/sites-available/default
+<span class="nb">sudo </span>systemctl restart nginx</code></pre></figure>
+
+<h3 id="nginx-server-configuration">Nginx server configuration</h3>
+<p>Refer <a href="https://www.nginx.com/resources/wiki/start/topics/examples/full/">https://www.nginx.com/resources/wiki/start/topics/examples/full/</a> and edit the 
+ <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-available/default</code> file with the following.</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">server {
+    index index.html index.htm index.nginx-debian.html;
+    server_name example.com www.example.com;
+
+    location /
+    {
+      proxy_pass http://localhost:5000;
+      proxy_buffering         on;
+    }
+}</code></pre></figure>
+
+<h2 id="run-server">Run Server</h2>
+<p>Refer <a href="https://www.dev2qa.com/how-to-run-node-js-server-in-background/">https://www.dev2qa.com/how-to-run-node-js-server-in-background/</a></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">nohup </span>node server.js  <span class="o">&gt;</span> output.log &amp; <span class="nb">disown</span></code></pre></figure>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+  <li>Run nodejs in the background using <a href="https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/">PM2</a></li>
+  <li><a href="https://medium.com/idomongodb/how-to-npm-run-start-at-the-background-%EF%B8%8F-64ddda7c1f1">https://medium.com/idomongodb/how-to-npm-run-start-at-the-background-%EF%B8%8F-64ddda7c1f1</a></li>
+  <li><a href="https://medium.com/geekculture/deploying-a-react-app-and-a-node-js-server-on-a-single-machine-with-pm2-and-nginx-15f17251ee74">https://medium.com/geekculture/deploying-a-react-app-and-a-node-js-server-on-a-single-machine-with-pm2-and-nginx-15f17251ee74</a></li>
+  <li><a href="https://keithweaverca.medium.com/setting-up-mern-stack-on-aws-ec2-6dc599be4737">https://keithweaverca.medium.com/setting-up-mern-stack-on-aws-ec2-6dc599be4737</a></li>
+  <li><a href="https://unix.stackexchange.com/questions/420594/why-process-killed-with-nohup">https://unix.stackexchange.com/questions/420594/why-process-killed-with-nohup</a></li>
+</ul>]]></content><author><name></name></author><category term="web-dev" /><category term="web-development" /><category term="programming" /><summary type="html"><![CDATA[An article on installing programs to use an EC2 machine as a webserver]]></summary></entry></feed>

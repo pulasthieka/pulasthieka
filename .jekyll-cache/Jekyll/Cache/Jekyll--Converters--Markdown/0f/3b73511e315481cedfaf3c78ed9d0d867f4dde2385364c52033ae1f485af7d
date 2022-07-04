@@ -1,0 +1,24 @@
+I"Ó<p>#</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<ul>
+  <li>Check IP address <code class="language-plaintext highlighter-rouge">ifconfig -a</code></li>
+  <li>Run commands quickly with  <strong>Alt + F2</strong></li>
+  <li>Mount disk <code class="language-plaintext highlighter-rouge">udisksctl mount --block-device /dev/disk/by-uuid/&lt;uuid&gt;</code></li>
+  <li>View startup applications - <code class="language-plaintext highlighter-rouge">gnome-session-properties</code></li>
+  <li>Closing a port <code class="language-plaintext highlighter-rouge">sudo ss --kill state listening src :1234</code></li>
+  <li>Making files executable <code class="language-plaintext highlighter-rouge">sudo chmod +x filename</code>
+    <h2 id="fixing-temporary-failure-in-name-resolution">Fixing Temporary Failure in Name Resolution</h2>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chmod o+r /etc/resolv.conf
+sudo nano /etc/resolv.conf
+</code></pre></div>    </div>
+    <p>Replace the nameserver with Google DNS <code class="language-plaintext highlighter-rouge">8.8.8.8</code>
+Save file <code class="language-plaintext highlighter-rouge">Crtl + X</code></p>
+    <h2 id="freeing-ports-in-use">Freeing ports in Use</h2>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof -i:8080
+kill &lt;PROCESSID&gt;
+# or
+kill $(lsof -t -i:8080)
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

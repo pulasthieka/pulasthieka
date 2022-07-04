@@ -1,0 +1,92 @@
+I"É<p>#</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<ul>
+  <li>Check IP address <code class="language-plaintext highlighter-rouge">ifconfig -a</code></li>
+  <li>Run commands quickly with  <strong>Alt + F2</strong></li>
+  <li>Mount disk <code class="language-plaintext highlighter-rouge">udisksctl mount --block-device /dev/disk/by-uuid/&lt;uuid&gt;</code></li>
+  <li>View startup applications - <code class="language-plaintext highlighter-rouge">gnome-session-properties</code></li>
+  <li>Closing a port <code class="language-plaintext highlighter-rouge">sudo ss --kill state listening src :1234</code></li>
+  <li>Making files executable <code class="language-plaintext highlighter-rouge">sudo chmod +x filename</code>
+    <h2 id="fixing-temporary-failure-in-name-resolution">Fixing Temporary Failure in Name Resolution</h2>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chmod o+r /etc/resolv.conf
+sudo nano /etc/resolv.conf
+</code></pre></div>    </div>
+    <p>Replace the nameserver with Google DNS <code class="language-plaintext highlighter-rouge">8.8.8.8</code>
+Save file <code class="language-plaintext highlighter-rouge">Crtl + X</code></p>
+    <h2 id="freeing-ports-in-use">Freeing ports in Use</h2>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof -i:8080
+kill &lt;PROCESSID&gt;
+# or
+kill $(lsof -t -i:8080)
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="fixing-garbeled-audio">Fixing garbeled Audio</h2>
+<p>Uninstall</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt remove speech-dispatcher
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pulseaudio <span class="nt">--check</span> 
+<span class="c"># should exit with no message if running</span>
+pulseaudio <span class="nt">--k</span>
+pulseaudio <span class="nt">--start</span>
+pulseaudio <span class="nt">--check</span>
+</code></pre></div></div>
+<h2 id="installing-appimage-files">Installing .AppImage Files</h2>
+<p>Eg: if the AppImage file name was Obsidian-0.12.3</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod a+x Obsidian-0.12.3.AppImage
+./Obsidian-0.12.3.AppImage
+</code></pre></div></div>
+
+<h2 id="installing-deb-files">Installing .deb Files</h2>
+<p><code class="language-plaintext highlighter-rouge">sudo apt install ./zoom\_amd64.deb</code>
+OR <code class="language-plaintext highlighter-rouge">sudo dpkg -i package\_file.deb</code></p>
+<h2 id="uninstalling">Uninstalling</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get remove packageName
+dpkg <span class="nt">--remove</span> packageName
+</code></pre></div></div>
+<h2 id="installing-via-cmake">Installing via CMake</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./configure
+make
+make install
+</code></pre></div></div>
+
+<h2 id="unzip-files">Unzip files</h2>
+<h3 id="tar">Tar</h3>
+<p><code class="language-plaintext highlighter-rouge">tar xvzf PACKAGE.tar.gz</code>
+<code class="language-plaintext highlighter-rouge">tar -xf package.tar.gz </code></p>
+<h3 id="rar">RAR</h3>
+<p><code class="language-plaintext highlighter-rouge">unrar e &lt;filename&gt;</code></p>
+<h2 id="mounting-drives">Mounting drives</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># unmounting</span>
+umount /dev/sdb1
+<span class="c"># mounting</span>
+<span class="nb">sudo </span>mount /dev/sdb1 <span class="nt">-t</span> ntfs-3g <span class="nt">-o</span> permissions /media/pulasthi/Files/
+<span class="c"># setting permissions for all</span>
+<span class="nb">sudo chmod </span>ugo+wx /media/pulasthi/Files/
+</code></pre></div></div>
+
+<p>ledev14 us-east-2</p>
+<h2 id="tracing-packet-path">Tracing Packet path</h2>
+<p>Use traceroute. <code class="language-plaintext highlighter-rouge">sudo apt install traceroute</code> 
+Using dig <code class="language-plaintext highlighter-rouge">sudo apt-get install dnsutils</code>
+https://phoenixnap.com/kb/linux-dig-command-examples</p>
+
+<h2 id="switching-java-versions">Switching JAVA versions</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>update-alternatives <span class="nt">--config</span> java
+<span class="c"># exporting java home</span>
+<span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">"/usr/lib/jvm/java-1.8.0-openjdk-amd64"</span>
+</code></pre></div></div>
+
+<h2 id="fingerprint">Fingerprint</h2>
+<p>https://askubuntu.com/questions/1239134/fingerprint-sensor-not-working-ubuntu-20-04</p>
+
+<h2 id="cycle-swap-memory">Cycle swap memory</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo swapoff -a; sudo swapon -a
+</code></pre></div></div>
+
+<h2 id="start-chrome-without-cors">Start Chrome without CORS</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">google</span><span class="o">-</span><span class="nx">chrome</span> <span class="o">--</span><span class="nx">disable</span><span class="o">-</span><span class="nx">site</span><span class="o">-</span><span class="nx">isolation</span><span class="o">-</span><span class="nx">trials</span> <span class="o">--</span><span class="nx">disable</span><span class="o">-</span><span class="nx">web</span><span class="o">-</span><span class="nx">security</span> <span class="o">--</span><span class="nx">user</span><span class="o">-</span><span class="nx">data</span><span class="o">-</span><span class="nx">dir</span><span class="o">=</span><span class="dl">"</span><span class="s2">~/tmp</span><span class="dl">"</span>
+</code></pre></div></div>
+:ET
