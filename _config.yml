@@ -8,7 +8,7 @@ middle_name: Pulasthi
 last_name: Ekanayake
 email: pulasthieka@yahoo.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  A short and simple intro to Pulasthi.
 footer_text: 
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
@@ -82,7 +82,7 @@ panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
 blog_name: the-blog # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
-blog_description: a collection of acquired knowledge 
+blog_description: a small collection of acquired knowledge 
 permalink: /blog/:year/:title/
 
 # Pagination

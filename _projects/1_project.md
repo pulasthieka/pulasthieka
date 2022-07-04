@@ -1,15 +1,44 @@
 ---
 layout: page
-title: project 1
+title: Breath Monitoring for Stress Management
 description: a project with a background image
 img: assets/img/12.jpg
 importance: 1
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Breath Monitoring for Stress Management 	(December 2021)
+Technologies used: Arduino, Python
+Developed a device to record the depth, duration and rate of breathing using piezo-electric sensors. The breath wave was used by a client to evaluate the effectiveness stress management therapies.  
+Virtual Career Fair Platform	 (November 2020)
+Technologies used: ReactJS, JavaScript, HTML, CSS	
+Designed and developed an online platform for scheduling and monitoring interview of over 100 students. This was instrumental in streamlining the flow of candidate at the career fair and was also used the following year. 
+Resistance band exercise monitor 	(2020)
+Technologies used: NodeMCU, MATLAB, JavaScript, HTML	
+Developed a wireless exercise monitor that uses a strain gauge to measure force applied on the resistance band. Designed an experimental procedure to calibrate the force sensor (strain gauge). 
+Diabetes detection using Heart Rate Variability  	(2020)
+Technologies used: Watson Studio, Python, scikit-learn	
+Used 24-hour ECG data from D1NAMO dataset and from the SWELL dataset to classify subjects as healthy or diabetic using heart rate variation statistics. A multilayer perceptron neural network was implemented using scikit-learn Python library. 
+Progressive Web Application – uMora Mathematics Competition	 (2020)
+Technologies used: ReactJS, JavaScript, HTML, CSS	
+Designed and developed the web application for uMora Mathematics competition 2020, a math Olympiad competition organised by the Electronics Club, University of Moratuwa. This was an online quiz with over 5000 participants. See it on https://umoraquiz.web.app/
+Progressive Web Application – Forestpin.com 	(2019)
+Technologies used: AngularJS, JavaScript, HTML, CSS	
+Designed and developed the website for Forestpin.com, a data analytics startup. This is a responsive website that is also a progressive web app built using the Angular JavaScript framework 
+Image down sampler on FPGA 	(2019)
+Technologies used: FPGA, Verilog, Intel Quartus	
+Programmed an FPGA to reduce resolution of an image. An in-depth understanding of computer architecture was required for implementing hardware-level matrix calculations. Intel Quartus Lite software was used to program the FPGA using Verilog hardware description language. 
+Analog Wall Following Robot 	(2018)
+Technologies used: Op-Amp, Altium Designer, NI Multisim	
+A wall following robot with a PID control system that uses only Operational Amplifiers (doesn’t use any microcontrollers). The circuit schematics were simulated using Multisim and the circuit layouts were designed on Altium Designer. 
+Temperature Controlled Solder Iron 	(2018)
+Technologies used: Thyristors, SolidWorks, Altium Designer, Multisim	
+Created a temperature-controlled A.C soldering iron that uses a thyristor-based power control system. 
+Autonomous Line Follower Robot 	(2017)
+Technologies used: PIC Microcontroller, Embedded C, MPLAB, Proteus	
+Created an autonomous robot that can navigate a maze following a white line on black background and handle slopes up to 30o. PIC microcontroller programmed using embedded C language on MPLAB. Proteus Design Suite was used for designing and simulating the circuits. 
+Find out more on www.
+
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
