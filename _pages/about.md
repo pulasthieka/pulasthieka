@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Never stopped learning</a>.
+subtitle: <a href='#'>Using AI and mathematics for medicine</a>.
 
 profile:
   align: right
@@ -13,7 +13,7 @@ news: false  # includes a list of news items
 social: true  # includes social icons at the bottom of the page
 ---
 
-A passionate learner and technology enthusiast looking to further my learning and use new technology to personalise healthcare. Qualified as a Biomedical engineer and having experience in software development, machine learning, signal processing and hardware prototyping. 
+I am a passionate learner and technology enthusiast looking to further my learning and use new technology to personalize healthcare. I'm qualified as a Biomedical engineer and has experience in software development, machine learning, signal processing and hardware prototyping.
 
 <br>
 <br>
@@ -21,36 +21,45 @@ A passionate learner and technology enthusiast looking to further my learning an
 
 ## Education
 
-
 #### University of Moratuwa `October 2016 – December 2021`
+
 - BSc. of Engineering Honours - Biomedical Engineering (First Class)
-- Department of Electronics and Telecommunication 
+- Department of Electronics and Telecommunication
 
-#### Chartered Institute of Management Accountants (CIMA) 	`November 2015 – August 2017`
-- CIMA Passed Finalist 
+#### Chartered Institute of Management Accountants (CIMA)  `November 2015 – August 2017`
 
-#### Vidura College – Colombo 	`2001-2015`
+- CIMA Passed Finalist
+
+#### Vidura College – Colombo  `2001-2015`
+
 - G.C.E Advanced Level (2015)  Physical Science Stream. Country Rank – 17  (Z-Score - 2.8676)
-- G.C.E Ordinary Level (2012)  - 8A and 1B 
+- G.C.E Ordinary Level (2012)  - 8A and 1B
 
 ## Research Experience
 
-#### Undergraduate Research Project - University of Moratuwa (Sri Lanka)	 `Feb 2020 - July 2021`
-**Thesis Title**: Reconfigurable multimodal bio signal acquisition system for measuring endothelial function	
+#### Undergraduate Research Project - University of Moratuwa (Sri Lanka)  `Feb 2020 - July 2021`
+
+**Thesis Title**: Reconfigurable multimodal bio signal acquisition system for measuring endothelial function 
 **Supervisor**: Dr. Anjula De Silva
 
-The study focused on the use of bioimpedance to diagnose endothelial dysfunction. We created a novel device to record 4 biosignals, blood pressure, temperature, bioimpedance and PPG signals from a patient’s arm in order to compare the significance of bioimpedance compared to existing methods. A clinical study was carried out using the device and we were able to identify a significant difference between Type II Diabetes patients and healthy patients. 
+The study focused on the use of bioimpedance to diagnose endothelial dysfunction. We created a novel device to record 4 biosignals, blood pressure, temperature, bioimpedance and PPG signals from a patient’s arm in order to compare the significance of bioimpedance compared to existing methods. A clinical study was carried out using the device and we were able to identify a significant difference between Type II Diabetes patients and healthy patients.
 Technologies used: ESP32, C++, Altium, Python, MATLAB
 
-#### Industrial Research Intern CSIRO - Data61 (Brisbane, Australia)	`July 2019 – December 2019`
+#### Industrial Research Intern CSIRO - Data61 (Brisbane, Australia) `July 2019 – December 2019`
+
 **Research Project**  - 3D SLAM (Spatial Localization And Mapping)  for robotics and situational awareness.
 **Supervisors**: Michael Thoreau, Nick Panitz
 
-This research focused on increasing worker safety on factory floors by providing situational awareness to robots and autonomous vehicles using security camera footage. A real-time 3D reconstruction of the factory was created from the video feed. I created an application for viewing and exploring the virtual environment. This was used by other researchers to evaluate the effectiveness of various computer vision algorithms and to demonstrate the research to clients for commercialization. I also worked on segmenting and classifying  objects in 3D space using machine learning models. 
+This research focused on increasing worker safety on factory floors by providing situational awareness to robots and autonomous vehicles using security camera footage. A real-time 3D reconstruction of the factory was created from the video feed. I created an application for viewing and exploring the virtual environment. This was used by other researchers to evaluate the effectiveness of various computer vision algorithms and to demonstrate the research to clients for commercialization. I also worked on segmenting and classifying  objects in 3D space using machine learning models.
 Technologies used: Python, JavaScript
 
 ## Work Experience
-#### Yaala Labs (Pvt) Ltd  `January 2021 - present`
+
+#### Machine Learning Engineer - SimplyfAI Inc `December 2022 - present`
+
+Working on creating Deep Learning systems to simplify AI for scientific discovery using small amounts of data.
+
+#### Yaala Labs (Pvt) Ltd  `January 2021 - November 2022`
 <!-- 16 De Fonseka Road, Colombo 05 -->
 ###### - Software Architect 	`December 2021 – present`
 
